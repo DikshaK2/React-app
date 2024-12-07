@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Global Reset and Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-color, #f9f9f9); /* Default light background */
+  color: var(--text-color, #333); /* Default dark text color */
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #fff;
+}
+
+/* Global utility classes */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Smooth transition for theme toggle */
+.theme-toggle-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+.theme-toggle-btn:hover {
+  color: var(--primary-color);
+}
